@@ -8,16 +8,20 @@
                 if(health == 20 && foodlvl >= 13) {
                     player.setFoodLevel(20);
                     player.setItemInHand(new ItemStack(Material.BOWL));
+                    player.sendMessage(ChatColor.BLUE + "Heal> " + ChatColor.YELLOW + "You were healed by " + ChatColor.GOLD + "Mushroom Soup" + ChatColor.YELLOW + ".");
                 } else if(health == 20 && foodlvl < 13) {
                     player.setFoodLevel(foodlvl + 7);
                     player.setItemInHand(new ItemStack(Material.BOWL));
+                    player.sendMessage(ChatColor.BLUE + "Heal> " + ChatColor.YELLOW + "You were healed by " + ChatColor.GOLD + "Mushroom Soup" + ChatColor.YELLOW + ".");
                 } else {
                     if(health < 20 && health >= 13) {
                             player.setHealth(20);
                             player.setItemInHand(new ItemStack(Material.BOWL));
+                            player.sendMessage(ChatColor.BLUE + "Heal> " + ChatColor.YELLOW + "You were healed by " + ChatColor.GOLD + "Mushroom Soup" + ChatColor.YELLOW + ".");
                         } else if(health < 20 && health < 13) {
                             player.setHealth(health + 7);
                             player.setItemInHand(new ItemStack(Material.BOWL));
+                            player.sendMessage(ChatColor.BLUE + "Heal> " + ChatColor.YELLOW + "You were healed by " + ChatColor.GOLD + "Mushroom Soup" + ChatColor.YELLOW + ".");
                     }
                 }
             }
