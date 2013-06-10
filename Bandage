@@ -1,0 +1,27 @@
+private Map<String, String> itemNames = new HashMap<String, String>();
+
+itemNames.put("paper", "Bandage");
+
+ItemStack[] items = player.getInventory().getContents();
+
+for(ItemStack item : items)
+{
+    if(item == null) // 
+        continue;
+
+    ItemMeta meta = item.getItemMeta();
+
+    if(meta.hasDisplayName()) 
+        continue;
+
+    String name = itemNames.get(item.getType() + ":" + item.getDurability()); 
+
+    if(name == null) 
+        name = itemNames.get(item.getType());
+
+    if(name == null) 
+        continue;
+
+    meta.setDisplayName(name); 
+    item.setItemMeta(meta); 
+}

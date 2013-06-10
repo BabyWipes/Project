@@ -1,6 +1,0 @@
-ItemStack dildo = new ItemStack(Material.BLAZE_ROD);
-ItemMeta dildoMeta = dildo.getItemMeta();
-dildoMeta.setDisplayName("Dildo");
-dildo.setItemMeta(dildoMeta);
- 
- 
