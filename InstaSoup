@@ -1,0 +1,25 @@
+@EventHandler
+    public void onPlayerInteract(PlayerInteractEvent e) {
+        Player player = e.getPlayer();
+        if(e.getAction() == Action.RIGHT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_AIR) {
+            if(player.getItemInHand().getType() == Material.MUSHROOM_SOUP) {
+                int health = player.getHealth();
+                int foodlvl = player.getFoodLevel();
+                if(health == 20 && foodlvl >= 13) {
+                    player.setFoodLevel(20);
+                    player.setItemInHand(new ItemStack(Material.BOWL));
+                } else if(health == 20 && foodlvl < 13) {
+                    player.setFoodLevel(foodlvl + 7);
+                    player.setItemInHand(new ItemStack(Material.BOWL));
+                } else {
+                    if(health < 20 && health >= 13) {
+                            player.setHealth(20);
+                            player.setItemInHand(new ItemStack(Material.BOWL));
+                        } else if(health < 20 && health < 13) {
+                            player.setHealth(health + 7);
+                            player.setItemInHand(new ItemStack(Material.BOWL));
+                    }
+                }
+            }
+        }
+    }
