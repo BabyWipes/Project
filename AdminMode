@@ -1,0 +1,41 @@
+package me.dannydog.mc.fng
+
+Public class AdminMode implements listener {
+
+@EventHandler
+ 
+public boolean onCommand(CommandSender sender, Command command, String label, string[]args) {
+
+    if(sender instanceof player) {
+
+    Player player = (Player) sender;
+
+    if(args.length == 0) {
+    player.sendMessage(ChatColor.YELLOW + "Invalid command, please use " + ChatColor.RED + "/x <on/off" + ChatColor.YELLOW + ".");
+
+    }
+
+    else if(args.length == 1) {
+  
+    if(label.equalsIgnoreCase("x"){
+
+if(args[0].equalsIgnoreCase("on"){
+
+((Player) sender).setGameMode(GameMode.CREATIVE);
+
+ player.sendMessage(ChatColor.BLUE + "Admin mode " + ChatColor.LIGHT_BLUE + "enabled" + ChatColor.BLUE + ".");
+
+    }
+
+    if(args[0].equalsIgnoreCase("off"){
+
+// This is wrong, re-doing soon. public PlayerGameModeChangeEvent(Player player, GameMode newGameMode)
+
+ player.sendMessage(ChatColor.BLUE + "Admin mode " + ChatColor.LIGHT_BLUE + "disabled" + ChatColor.BLUE + ".");
+
+                    }
+                  }
+             }
+         }
+     }
+}
