@@ -1,0 +1,36 @@
+public class PlayerRandom implements Listener {
+
+onCommand(CommandSender sender, Command command, String label, String[] args) {
+		if (sender instanceof Player) {
+			Player player = (Player) sender;
+
+			if (args.length == 0) {
+				player.sendMessage(ChatColor.RED + "[" + ChatColor.GOLD + "-" + ChatColor.RED + "] " + ChatColor.BLUE + "Please use " + ChatColor.DARK_BLUE + "/p r");
+			}
+
+			else if (args.length == 1) {
+				if (label.equalsIgnoreCase("p")) {
+					if (args[0].equalsIgnoreCase("r")) {
+
+int i = new Random.nextInt(getServer().getOnlinePlayers().length);
+
+Player p = getServer().getOnlinePlayers()[i];
+
+p.getInventory().addItem(new ItemStack(Material.DIAMOND, 5));
+
+bukkit.broadcastMessage(ChatColor.RED + "[" + ChatColor.GOLD + "+" + ChatColor.RED + "] " + ChatColor.BLUE + p + ChatColor.DARK_BLUE + " was randomly chosen and has received 5 diamonds!");
+
+p.sendMessage(ChatColor.LIGHT_GRAY + "5 diamonds were added to your inventory!");
+
+
+        }
+         return false;
+          }
+     }
+}
+
+
+
+
+
+
