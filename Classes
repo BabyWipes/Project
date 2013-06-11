@@ -19,7 +19,6 @@ public class FireNomad implements Listener {
                     player.sendMessage(ChatColor.BLUE + "Wind " + ChatColor.DARK_BLUE + "class enabled.");
                     player.sendMessage(ChatColor.BLUE + "For all information on the " + ChatColor.DARK_BLUE + "Wind " + ChatColor.BLUE + "class type " + ChatColor.RED + "/class wind" + ChatColor.BLUE + ".");
                  
-                                }
             }
         }
     }
