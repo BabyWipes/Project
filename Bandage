@@ -6,7 +6,7 @@ ItemStack[] items = player.getInventory().getContents();
 
 for(ItemStack item : items)
 {
-    if(item == null) // 
+    if(item == null) 
         continue;
 
     ItemMeta meta = item.getItemMeta();
