@@ -1,0 +1,26 @@
+public class FireNomad implements Listener {
+
+    public static HashMap<String, String> pclass = new HashMap<String, String>();
+
+    @EventHandler
+    public void onInvClick(InventoryCloseEvent event) {
+    
+        Player player = (Player) event.getPlayer();
+        Player inventory pi = event.getInventory();
+        if(pi.getHelmet() != null && pi.getChestPlate() != null && pi.getLeggings() != null && pi.getBoots() != null) {
+            
+            int h = pi.getHelmet().getTypeId();
+            int c = pi.getChestPlate().getTypeId();
+            int l = pi.getLeggings().getTypeId();
+            int b = pi.getBoots().getTypeId();
+
+            if(h == 306 && c == 307 && l == 308 && b == 309) {
+                   
+                    player.sendMessage(ChatColor.BLUE + "Wind " + ChatColor.DARK_BLUE + "class enabled.");
+                    player.sendMessage(ChatColor.BLUE + "For all information on the " + ChatColor.DARK_BLUE + "Wind " + ChatColor.BLUE + "class type " + ChatColor.RED + "/class wind" + ChatColor.BLUE + ".");
+                 
+                                }
+            }
+        }
+    }
+}
