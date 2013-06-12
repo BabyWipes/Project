@@ -28,7 +28,7 @@ public void onInteract(PlayerInteractEvent event) {
         if (pl.onGround) {
             player.addPotionEffect(new PotionEffect(PotionEffectType.SWIFTNESS, 0. 300));
 
-p.sendMessage(ChatColor.RED + "[" + ChatColor.GOLD + "-" + ChatColor.RED + "] " + ChatColor.DARK_BLUE + "You activated " + ChatColor.BLUE + "Speed Cola" + ChatColor.DARK + " for" + ChatColor.BLUE + " 15 " + ChatColor.DARK_BLUE "seconds");
+player.sendMessage(ChatColor.RED + "[" + ChatColor.GOLD + "-" + ChatColor.RED + "] " + ChatColor.DARK_BLUE + "You activated " + ChatColor.BLUE + "Speed Cola" + ChatColor.DARK + " for" + ChatColor.BLUE + " 15 " + ChatColor.DARK_BLUE "seconds");
            
                         }
                     }
