@@ -18,7 +18,16 @@ public class FireNomad implements Listener {
                    
                     player.sendMessage(ChatColor.BLUE + "Wind " + ChatColor.DARK_BLUE + "class enabled.");
                     player.sendMessage(ChatColor.BLUE + "For all information on the " + ChatColor.DARK_BLUE + "Wind " + ChatColor.BLUE + "class type " + ChatColor.RED + "/class wind" + ChatColor.BLUE + ".");
-                 
+
+@EventHandler
+public void onInteract(PlayerInteractEvent event) {
+    Player player = event.getPlayer();
+ 
+    if (player.getItemInHand().getType() == Material.BLUE_DYE && (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK)) {
+        net.minecraft.server.EntityPlayer pl = (net.minecraft.server.EntityPlayer)((CraftPlayer)player).getHandle();
+        if (pl.onGround) {
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SWIFTNESS, 0. 600));
+                
             }
         }
     }
